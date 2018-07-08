@@ -15,7 +15,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: ./test_images/solidYellowLeft.jpg "Original"
+[image2]: ./test_images_output/YCrCb/solidYellowLeft.jpg "YCrCb"
+[image3]: ./test_images_output/layer0/solidYellowLeft.jpg "Layer 0 of YCrCb"
+[image4]: ./test_images_output/canny/solidYellowLeft.jpg "Canny Detected Edges"
+[image5]: ./test_images_output/ROI/solidYellowLeft.jpg "Edges in ROI"
+[image6]: ./test_images_output/ROI/solidYellowLeft.jpg "hough lines followed by merging to find final lanes"
 
 ---
 
@@ -24,21 +29,20 @@ The goals / steps of this project are the following:
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 My pipeline consisted of 5 steps :
-
+![alt text][image1]
 #### a. Converted the images to YCrCb image
-#### b. Thresholding the image in YCrCb space to find the white and yellow regions
-#### c. Defined the ROI(region of interest), and, then removed the thresholded portion of the image that was not in the ROI.
-#### d. Then I am using this 3 layer image to extract a single layer that represents the thresholded image.
-#### e. Applied canny edge detection on this layer.
+![alt text][image2]
+#### b. Extracted Y layer of YCrCb image
+![alt text][image3]
+#### c. Applied canny edge detection on this layer.
+![alt text][image4]
+#### d. Removed edges outside the Region of Interest (ROI)
+![alt text][image5]
 #### f. Used hough transform to detect the straight lines in the image(did a lot of manual tuning here).
 #### g. Merged all the hough lines to only two line, one on the left and other on the right of the lane. I have introduced this change in the hough_lines method directly, so it is returning only two lines.
+![alt text][image6]
 
-####Note : Special care have been taken inside the methods hough_lines and draw_lines to make sure the code runs even if no lines are generated.
-
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
+####Note : Special care have been taken inside the methods draw_lines to make sure the code takes care of situation when no lane is detected
 
 
 ### 2. Identify potential shortcomings with your current pipeline
