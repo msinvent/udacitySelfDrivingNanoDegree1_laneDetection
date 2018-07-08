@@ -16,11 +16,11 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./test_images/solidYellowLeft.jpg "Original"
-[image2]: ./test_images_output/YCrCb/solidYellowLeft.jpg "YCrCb"
-[image3]: ./test_images_output/layer0/solidYellowLeft.jpg "Layer 0 of YCrCb"
-[image4]: ./test_images_output/canny/solidYellowLeft.jpg "Canny Detected Edges"
-[image5]: ./test_images_output/ROI/solidYellowLeft.jpg "Edges in ROI"
-[image6]: ./test_images_output/ROI/solidYellowLeft.jpg "hough lines followed by merging to find final lanes"
+[image2]: ./test_images_output/YCrCb/output_solidYellowLeft.jpg "YCrCb"
+[image3]: ./test_images_output/layer0/output_solidYellowLeft.jpg "Layer 0 of YCrCb"
+[image4]: ./test_images_output/canny/output_solidYellowLeft.jpg "Canny Detected Edges"
+[image5]: ./test_images_output/ROI/output_solidYellowLeft.jpg "Edges in ROI"
+[image6]: ./test_images_output/rightAndLeftLanes/output_solidYellowLeft.jpg "hough lines followed by merging to find final lanes"
 
 ---
 
