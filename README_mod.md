@@ -21,6 +21,7 @@ The goals / steps of this project are the following:
 [image4]: ./test_images_output/canny/output_solidYellowLeft.jpg "Canny Detected Edges"
 [image5]: ./test_images_output/ROI/output_solidYellowLeft.jpg "Edges in ROI"
 [image6]: ./test_images_output/rightAndLeftLanes/output_solidYellowLeft.jpg "hough lines followed by merging to find final lanes"
+[image7]: ./test_images_output/output_solidYellowLeft.jpg "Detected Lane Edges"
 
 ---
 
@@ -41,7 +42,7 @@ My pipeline consisted of 5 steps :
 #### f. Used hough transform to detect the straight lines in the image(did a lot of manual tuning here).
 #### g. Merged all the hough lines to only two line, one on the left and other on the right of the lane. I have introduced this change in the hough_lines method directly, so it is returning only two lines.
 ![alt text][image6]
-
+![alt text][image7]
 ####Note : Special care have been taken inside the methods draw_lines to make sure the code takes care of situation when no lane is detected
 
 
