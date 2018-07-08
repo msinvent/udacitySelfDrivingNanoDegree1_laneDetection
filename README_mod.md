@@ -25,9 +25,16 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps :
 
-#### a. First, I converted the images to YCrCb image, then I .... 
+#### a. Converted the images to YCrCb image
+#### b. Thresholding the image in YCrCb space to find the white and yellow regions
+#### c. Defined the ROI(region of interest), and, then removed the thresholded portion of the image that was not in the ROI.
+#### d. Then I am using this 3 layer image to extract a single layer that represents the thresholded image.
+#### e. Applied canny edge detection on this layer.
+#### f. Used hough transform to detect the straight lines in the image(did a lot of manual tuning here).
+#### g. Merged all the hough lines to only two line, one on the left and other on the right of the lane. I have introduced this change in the hough_lines method directly, so it is returning only two lines.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+####Note : Special care have been taken inside the methods hough_lines and draw_lines to make sure the code runs even if no lines are generated.
+
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
