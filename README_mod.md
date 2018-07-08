@@ -43,18 +43,17 @@ My pipeline consisted of 5 steps :
 #### g. Merged all the hough lines to only two line, one on the left and other on the right of the lane. I have introduced this change in the hough_lines method directly, so it is returning only two lines.
 ![alt text][image6]
 ![alt text][image7]
-####Note : Special care have been taken inside the methods draw_lines to make sure the code takes care of situation when no lane is detected
+#### h : Special care have been taken inside the methods draw_lines to make sure the code takes care of situation when no lane is detected
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
+I current pipeline is definetly dependent on the brightness and it will be very hard to tune it for all the possible scenarios a real car will face if we go through this simple strategy. Moreover, we are detecting lanes by looking at each image frame individually and thus losing a lot of causal information that a video stream of road might have regarding the lane location.
 
 
 ### 3. Suggest possible improvements to your pipeline
+
+An instantaneous and quick change might be to use the lane line locations from the previous frames to finalize the lane line location in the current frame. We can use it to atleast find unrealistic changes to flag a misinformation.
 
 A possible improvement would be to ...
 
