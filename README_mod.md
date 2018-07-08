@@ -48,7 +48,7 @@ My pipeline consisted of 5 steps :
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-I current pipeline is definetly dependent on the brightness and it will be very hard to tune it for all the possible scenarios a real car will face if we go through this simple strategy. Moreover, we are detecting lanes by looking at each image frame individually and thus losing a lot of causal information that a video stream of road might have regarding the lane location.
+The current pipeline is definetly dependent on the brightness and it will be very hard to tune it for all the possible scenarios a real car will face if we go through this simple strategy. Moreover, we are detecting lanes by looking at each image frame individually and thus losing a lot of causal information that a video stream of road might have regarding the lane location.
 
 
 ### 3. Suggest possible improvements to your pipeline
