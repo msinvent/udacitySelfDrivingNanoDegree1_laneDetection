@@ -54,7 +54,4 @@ The current pipeline is definetly dependent on the brightness and it will be ver
 ### 3. Suggest possible improvements to your pipeline
 
 An instantaneous and quick change might be to use the lane line locations from the previous frames to finalize the lane line location in the current frame. We can use it to atleast find unrealistic changes to flag a misinformation.
-
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+Another change may be to use data from different times of the day and different season to see if somekind of adaptive threasholding will be able to find a blanket solution for edge detection instead of simple canny.
