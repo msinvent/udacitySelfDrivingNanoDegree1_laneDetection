@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps :
+My pipeline consisted of 6 main steps :
 ![alt text][image1]
 #### a. Converted the images to YCrCb image
 ![alt text][image2]
@@ -35,11 +35,11 @@ My pipeline consisted of 5 steps :
 ![alt text][image4]
 #### d. Removed edges outside the Region of Interest (ROI)
 ![alt text][image5]
-#### f. Used hough transform to detect the straight lines in the image(did a lot of manual tuning here).
-#### g. Merged all the hough lines to only two line, one on the left and other on the right of the lane. I have introduced this change in the hough_lines method directly, so it is returning only two lines.
+#### e. Used hough transform to detect the straight lines in the image(did a lot of manual tuning here).
+#### f. Merged all the hough lines to only two line, one on the left and other on the right of the lane. I have introduced this change in the hough_lines method directly, so it is returning only two lines.
 ![alt text][image6]
 ![alt text][image7]
-#### h : Special care have been taken inside the methods draw_lines to make sure the code takes care of situation when no lane is detected
+#### g : Special care have been taken inside the methods draw_lines to make sure the code takes care of situation when no lane is detected
 
 
 ### 2. Identify potential shortcomings with your current pipeline
